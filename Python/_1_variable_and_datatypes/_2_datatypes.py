@@ -10,26 +10,27 @@
 
 # Type Function - returns the datatype of variable passed inside the function
 
+# immutable
 # num = 10
 # num_type = type(num)
 # print("Num Type :",num_type)
 
-
+# immutable
 # name = "Bharati"
 # name_type = type(name)
 # print("Name Type : ",name_type)
 
-
+# immutable
 # salary = 10000.50
 # salary_type = type(salary)
 # print("Salary Type : ",salary_type)
 
-
+# immutable
 # qualified = True
 # qualified_type = type(qualified)
 # print("Qualified Type : ",qualified_type)
 
-
+# immutable
 # eq = 1 + 1j
 # eq_type = type(eq)
 # print("Eq Type : ",eq_type)
