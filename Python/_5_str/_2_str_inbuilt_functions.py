@@ -20,3 +20,5 @@ print("Endswith : ",ends_with)
 
 starts_with = str1.startswith("p")
 print("Startswith : ",starts_with)
+
+
