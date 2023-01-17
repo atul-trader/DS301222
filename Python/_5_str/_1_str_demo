@@ -1,0 +1,21 @@
+# str
+# datatypes allows you to store character,word,statement,para
+# indexed based
+# immutable
+# str is a class
+
+name = "Bharati"
+print(name,type(name))
+
+name = 'Bharati'
+print(name,type(name))
+
+name = '''Bharati'''
+print(name,type(name))
+
+name = """Bharati"""
+print(name,type(name))
+
+statement = """Edyoda's session at "7:30pm" """
+print(statement)
+
