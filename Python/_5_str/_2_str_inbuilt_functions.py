@@ -1,12 +1,12 @@
 str1 = "python is a programming language parrot"
 print("Original Str : ",str1)
 
-lst = ["cat","mat","sat"]
-join_demo = "".join(lst)
-print(join_demo)
+# lst = ["cat","mat","sat"]
+# join_demo = "".join(lst)
+# print(join_demo)
 
-split_demo = str1.split("p")
-print("Split : ",split_demo)
+# split_demo = str1.split("p")
+# print("Split : ",split_demo)
 
 # enumerate_demo = enumerate(str1)
 # print("Enumerate : ",list(enumerate_demo))
