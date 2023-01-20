@@ -8,9 +8,9 @@ for i in range(size):
 
 print(lst)
 
+# for i in lst:
+#     print(i)
 
-for i in lst:
-    print(i)
+# for i in range(len(lst)):
+#     print(lst[i])
 
-for i in range(len(lst)):
-    print(lst[i])
