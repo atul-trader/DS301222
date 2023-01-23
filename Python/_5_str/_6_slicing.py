@@ -33,3 +33,5 @@ substring = str1[::-1]
 print(substring)
 
 
+
+

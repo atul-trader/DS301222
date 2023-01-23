@@ -10,3 +10,5 @@ print("Count : ",counter)
 index_demo = tup.index(10)
 print("Index : ",index_demo)
 
+
+
