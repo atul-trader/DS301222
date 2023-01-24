@@ -40,5 +40,5 @@ print(set_demo1)
 # set_demo.remove(101)
 # print(set_demo)
 
-set_demo.discard(101)
-print(set_demo)
+# set_demo.discard(101)
+# print(set_demo)
