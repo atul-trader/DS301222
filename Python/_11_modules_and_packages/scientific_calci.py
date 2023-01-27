@@ -11,7 +11,13 @@
 
 
 
-from basic_calci import * # all
+# from basic_calci import * # all
+
+# add()
+# sub()
+
+
+from basic_calci import add,sub
 
 add()
 sub()
