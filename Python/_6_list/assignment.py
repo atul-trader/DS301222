@@ -34,3 +34,18 @@
 # [1,2,5,7,6]
 # [1,2,5,6,7]
 
+
+
+x = 'happy'
+
+
+
+def summation():
+
+    print(x)
+
+    x = 'sad'
+
+
+
+summation()
