@@ -6,3 +6,7 @@ if res:
     print ("aadhar number is valid")
 else:
     print ("aadhar number is not valid")
+
+pan no
+
+5 capital characters , 4 numbers , 1 capital character
