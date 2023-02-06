@@ -12,6 +12,5 @@ lst = [5,6,3,2,6,8,3,2,7,9]
 
 def even(lst):
     return lst % 2 == 0
-
 data = list(filter(even,lst))
 print("Result : ",data)
