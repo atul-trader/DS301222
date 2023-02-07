@@ -20,6 +20,6 @@ class student:
 
 stu = student()
 
-# stu.student_info()
-# stu.student_details()
+stu.student_info()
+stu.student_details()
 stu.display()
