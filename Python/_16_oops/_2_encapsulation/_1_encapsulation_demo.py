@@ -2,6 +2,8 @@
 # means binding attributes (variable) and behaviour (methods) into single unit (getter and setter)
 # accessing private members via public environment
 
+# __str__ is a special method which gets called whenever an object is printed!
+
 class car:
 
     def __init__(self,engine,brand,mileage):
@@ -9,7 +11,7 @@ class car:
         self.brand = brand
         self.mileage = mileage
 
-    def display(self):
+    def __str__(self):
         return f"Engine : {self.engine} \nBrand : {self.brand} \nMileage : {self.mileage}"
 
     # setter and getter
@@ -33,12 +35,12 @@ class car:
 
 
 obj = car("Diesel Engine","BMW","35kmph")
-print(obj.display())
+print(obj)
 
 print(obj.get_mileage())
 
 obj.set_mileage("40kmph")
 
-print(obj.display())
+print(obj)
 
 print(obj.get_engine())

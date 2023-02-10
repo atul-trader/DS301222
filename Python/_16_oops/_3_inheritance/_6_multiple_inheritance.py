@@ -31,4 +31,3 @@ son.land()
 son.mobile()
 
 print(Son.mro()) # MRO -> Method Resolution Order
-

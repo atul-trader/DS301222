@@ -1,6 +1,6 @@
 # Inheritance
 
-# it means acquire properties from one class to another
+# it means acquiring properties from one class to another
 # helps to reuse the code
 # helps to save effort and time
 
