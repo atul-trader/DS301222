@@ -1,0 +1,1 @@
+file = open("abc.txt")
