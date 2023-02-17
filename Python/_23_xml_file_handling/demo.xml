@@ -1,0 +1,14 @@
+<students>
+    <student>
+        <rno>1</rno>
+        <student_name name="first">Bharati</student_name>
+    </student>
+    <student>
+        <rno>2</rno>
+        <student_name name="second">Vaishu</student_name>
+    </student>
+    <student>
+        <rno>3</rno>
+        <student_name name="third">Dhanashri</student_name>
+    </student>
+</students>
