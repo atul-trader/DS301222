@@ -31,8 +31,21 @@ class array:
     def display(self):
         return self.data
         
-    def remove(self,index):
-        pass
+    def removeByIndex(self,index): 
+        for i in range(self.length):
+            if i == index:
+                self.data.pop(i)
+                self.length -= 1
+                break
+        else:
+            print("Error : No such index found")
+
+    def removeByElement(self,element):
+        if element in self.data:
+            self.data.remove(element)
+            self.length -= 1
+        else:
+            print("No such element found.")
 
 obj = array(5)
 obj.add(1)
@@ -40,4 +53,10 @@ obj.add(11)
 obj.add(21)
 obj.add(31)
 obj.add(41)
+print(obj.display())
+
+# obj.removeByIndex(20)
+# print(obj.display())
+
+obj.removeByElement(44)
 print(obj.display())
