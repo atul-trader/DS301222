@@ -15,6 +15,10 @@
 # lst.remove(200)
 # print(lst)
 
+# Types of Array
+# 1D Array (1-Dimension)
+# 2D Array (2-Dimension)
+
 class array:
     def __init__(self,fix_size):
         self.fix_size = fix_size
@@ -45,7 +49,23 @@ class array:
             self.data.remove(element)
             self.length -= 1
         else:
-            print("No such element found.")
+            print("Error : No such element found.")
+
+    def insert(self,index,element):
+        if self.length < self.fix_size:
+            self.data.insert(index,element)
+            self.length += 1
+        else:
+            print("Error : Cannot add more element, as array is full.")
+
+    def viewByIndex(self,index):
+    
+        for i in range(self.length):
+            if i == index:
+                return self.data[i]
+        else:
+            print("Error : No such index found.")
+            return None
 
 obj = array(5)
 obj.add(1)
@@ -57,6 +77,11 @@ print(obj.display())
 
 # obj.removeByIndex(20)
 # print(obj.display())
+ 
+# obj.removeByElement(41)
+# print(obj.display())
 
-obj.removeByElement(44)
-print(obj.display())
+# obj.insert(2,200)
+# print(obj.display())
+
+print(obj.viewByIndex(3))
