@@ -32,10 +32,10 @@ class linkedlist:
                 itr = itr.link 
         return count
 
-    
+    # 3,6,5
     def appendleft(self,element):
         if self.isEmpty():
-            self.head = node(element) # mem_loc of 3 node
+            self.head = node(element) # 3
             print("\ninside if : Memory Location : ",self.head," Element : ",self.head.data," Link : ",self.head.link)
             return
 
@@ -45,7 +45,7 @@ class linkedlist:
         while itr.link:
             itr = itr.link
             print("inside while : ",itr)
-        itr.link = node(element)
+        itr.link = node(element) # 5
         print("\noutside while : Memory Location : ",itr," Element : ",itr.data," Link : ",itr.link)
 
 
