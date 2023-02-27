@@ -3,6 +3,7 @@ class movie_ticket:
     def __init__(self,rows,columns):
         self.rows = rows
         self.columns = columns
+        self.user_details = {}
 
     def show_seats(self):
         for i in range(self.rows+1):
@@ -18,6 +19,24 @@ class movie_ticket:
             print()
 
     def buy_ticket(self):
-        pass
-    
+        
+        row=int(input("Enter the row number for which you want to book the ticket : ")) # 1
+        column=int(input("Enter the column number for which you want to book the ticket : ")) #2
+
+        seat_no = str(row) + str(column) #12
+
+        # TODO: Need to write the logic for front seat and back seat ticket price
+        ticket_price=10
+
+        choice = int(input(f"Your opt seat number is {seat_no}, Hence the price for your seat is Rs. {ticket_price}. If you still wish to book the ticket, please enter \n1.Yes \n2.No : \n"))
+        if choice == 1:
+            name=input("Enter your name : ")
+            gender=input("Enter gender (Male/Female) :")
+            age=int(input("Enter your age :"))
+            phone_no=int(input("Enter your phone number (10 digits only) :"))
+            self.user_details[seat_no] = [name,gender,age,ticket_price,phone_no]
+            print("Booked Successfully!!!",self.user_details)
+        else:
+            print("No Problem! Thank You for connecting with Book My Show!!!")
+
         
