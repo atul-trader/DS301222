@@ -21,14 +21,21 @@ class movie_ticket:
 
     def buy_ticket(self):
         
-        row=int(input("Enter the row number for which you want to book the ticket : ")) # 1
-        column=int(input("Enter the column number for which you want to book the ticket : ")) #2
+        row=int(input("Enter the row number for which you want to book the ticket : "))
+        column=int(input("Enter the column number for which you want to book the ticket : "))
 
-        seat_no = str(row) + str(column) #12
+        seat_no = str(row) + str(column) 
 
-        # TODO: Need to write the logic for front seat and back seat ticket price
-        ticket_price=10
-
+        total_seats = self.rows*self.columns
+        
+        if total_seats <= 60:
+            ticket_price = 10   
+        else:
+            if row < (self.rows//2):
+                ticket_price = 10
+            else:
+                ticket_price = 8
+      
         choice = int(input(f"Your opt seat number is {seat_no}, Hence the price for your seat is Rs. {ticket_price}. If you still wish to book the ticket, please enter \n1.Yes \n2.No : \n"))
         if choice == 1:
             name=input("Enter your name : ")
@@ -43,13 +50,25 @@ class movie_ticket:
 
     def statistics(self):
 
-        ticket_price = 10
+        price_lst = []
+        for k,v in self.user_details.items():
+            price_lst.append(v[3])
+
+        current_income = sum(price_lst)
+       
         total_seats = self.rows*self.columns
         
+        if total_seats <= 60:
+            total_income = total_seats * 10  
+        else:
+            front_price = 10
+            back_price = 8
+            front_seats = (self.rows//2)*self.columns
+            back_seats = total_seats-front_seats
+            total_income = front_seats * front_price + back_seats * back_price
+          
         no_of_tickets_booked = len(self.user_details)
         percentage_of_ticket_booked = (no_of_tickets_booked/total_seats) * 100
-        current_income = no_of_tickets_booked * ticket_price
-        total_income = total_seats * ticket_price
 
         print(f"Total number of tickets booked : {no_of_tickets_booked}")
         print(f"Percentage of booked tickets : {percentage_of_ticket_booked}")
@@ -62,7 +81,6 @@ class movie_ticket:
         
         seat_no = str(rows)+str(coloumn)
 
-        
         if seat_no in self.user_details.keys():
             user = self.user_details[seat_no]
             print(f"\nName : {user[0]}")
