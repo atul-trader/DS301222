@@ -13,10 +13,11 @@ class Main:
         if choice == 3:
             print("********Statistics********")
             movie_ticket_obj.statistics()
-            
+
         if choice == 4:
             print("********User Info********")
-
+            movie_ticket_obj.get_user_info()
+            
 if __name__ == "__main__":
     rows = int(input("Enter the number for rows : "))
     columns = int(input("Enter the number of seats in each rows : "))

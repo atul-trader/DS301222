@@ -40,11 +40,23 @@ class movie_ticket:
         else:
             print("No Problem! Thank You for connecting with Book My Show!!!")
 
+
     def statistics(self):
-        # no_of_tickets_booked
-        # percentage_of_ticket_booked
-        # current_income
-        # total_income
+
+        ticket_price = 10
+        total_seats = self.rows*self.columns
+        
+        no_of_tickets_booked = len(self.user_details)
+        percentage_of_ticket_booked = (no_of_tickets_booked/total_seats) * 100
+        current_income = no_of_tickets_booked * ticket_price
+        total_income = total_seats * ticket_price
+
+        print(f"Total number of tickets booked : {no_of_tickets_booked}")
+        print(f"Percentage of booked tickets : {percentage_of_ticket_booked}")
+        print(f"Current income : {current_income}")
+        print(f"Total income : {total_income}")
+
+    def get_user_info(self):
         pass
 
         
