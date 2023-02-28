@@ -57,6 +57,20 @@ class movie_ticket:
         print(f"Total income : {total_income}")
 
     def get_user_info(self):
-        pass
+        rows=int(input("Enter the row number of seat for which you want the info. : "))
+        coloumn=int(input("Enter the coloumn number of seat for which you want the info. : "))
+        
+        seat_no = str(rows)+str(coloumn)
+
+        
+        if seat_no in self.user_details.keys():
+            user = self.user_details[seat_no]
+            print(f"\nName : {user[0]}")
+            print(f"Gender : {user[1]}")
+            print(f"Age : {user[2]}")
+            print(f"Ticket Price : {user[3]}")
+            print(f"Phone No. : {user[4]}\n")
+        else:
+            print(f"The seat number you were looking for has not been booked!!!")
 
         
