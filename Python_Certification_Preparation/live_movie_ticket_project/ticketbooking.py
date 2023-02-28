@@ -17,6 +17,7 @@ class movie_ticket:
                 else:
                     print("S",end=" ")
             print()
+            
 
     def buy_ticket(self):
         
@@ -38,5 +39,12 @@ class movie_ticket:
             print("Booked Successfully!!!",self.user_details)
         else:
             print("No Problem! Thank You for connecting with Book My Show!!!")
+
+    def statistics(self):
+        # no_of_tickets_booked
+        # percentage_of_ticket_booked
+        # current_income
+        # total_income
+        pass
 
         

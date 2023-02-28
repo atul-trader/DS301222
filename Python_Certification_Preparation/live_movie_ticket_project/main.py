@@ -12,6 +12,8 @@ class Main:
 
         if choice == 3:
             print("********Statistics********")
+            movie_ticket_obj.statistics()
+            
         if choice == 4:
             print("********User Info********")
 
