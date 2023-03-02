@@ -1,9 +1,11 @@
 class movie_ticket:
 
+
     def __init__(self,rows,columns):
         self.rows = rows
         self.columns = columns
         self.user_details = {}
+
 
     def show_seats(self):
         for i in range(self.rows+1):
@@ -15,7 +17,10 @@ class movie_ticket:
                 elif i == 0:
                     print(j,end=" ")
                 else:
-                    print("S",end=" ")
+                    if self.isBooked(i,j):
+                        print("B",end=" ")
+                    else:
+                        print("S",end=" ")
             print()
             
 
@@ -75,6 +80,7 @@ class movie_ticket:
         print(f"Current income : {current_income}")
         print(f"Total income : {total_income}")
 
+
     def get_user_info(self):
         rows=int(input("Enter the row number of seat for which you want the info. : "))
         coloumn=int(input("Enter the coloumn number of seat for which you want the info. : "))
@@ -90,5 +96,12 @@ class movie_ticket:
             print(f"Phone No. : {user[4]}\n")
         else:
             print(f"The seat number you were looking for has not been booked!!!")
+
+
+    def isBooked(self,row,column):
+        seat=str(row)+str(column)
+        if seat in self.user_details.keys():
+            return True
+        return False
 
         
