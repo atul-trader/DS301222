@@ -1,5 +1,6 @@
 import re
 from operations import *
+import random
 
 if __name__ == "__main__":
     while True:
@@ -86,9 +87,59 @@ if __name__ == "__main__":
                 continue  
 
             if login_choice == 1:
-                pass
+                username = input("Enter email ID: ")
+                password = input("Enter your password: ")
+                login_flag = login("admin.json",username,password)
+                if login_flag:
+                    print("Login successfully!!")
+                    while True:
+                        try:
+                            module_choice = int(input("Enter \n1.Create a Module \n2.View a Module \n3.Delete a Module \n4.Update a Module \n5.Exit : \n"))
+                        except ValueError:
+                            print("Please enter valid choice!")
+                            continue 
+
+                        if module_choice == 1:
+                            module_ID = random.randint(10000,20000)
+                            module_name = input("Enter module Name: ")
+                            start_date = input("Enter start date in format(dd-mm-yyyy): ")
+                            end_date = input("Enter start date in format(dd-mm-yyyy): ")
+
+                            module_flag = create_module("module.json",module_ID,module_name,start_date,end_date)
+                            print("Created Module!") if module_flag else print("Failed to create the module!")
+
+                        elif module_choice == 2:
+                            modules = view_module("module.json")
+                            for i in modules:
+                                print(i)
+
+                        elif module_choice == 3:
+                            module_ID = int(input("Enter module ID which you want to delete : "))
+                            delete_flag = delete_module("module.json",module_ID)
+                            print("Deleted Module Successfully") if delete_flag else print("Couldn't delete the module Or No such Module ID present.")
+
+                        elif module_choice == 4:
+                            pass
+                        
+                        else:
+                            print("Thank You for connecting with Edyoda! See you next time ...")
+                            exit()
+                else:
+                    print("Invalid username or password!!!")
+               
             elif login_choice == 2:
-                pass
+                username = input("Enter email ID: ")
+                password = input("Enter your password: ")
+                login_flag = login("student.json",username,password)
+                if login_flag:
+                    print("Login successfully!!")
+                else:
+                    print("Invalid username or password!!!")
+
             else: 
                 print("Thank You for connecting with Edyoda! See you next time ...")
                 exit()
+        
+        else:
+            print("Thank You for connecting with Edyoda! See you next time ...")
+            exit()
