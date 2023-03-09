@@ -11,7 +11,7 @@ data = {
     "rno":1
 }
 
-# json rules
+# diff between json and python dictiontary
 # string should be quoted with double quoted
 # True is true
 # False is false

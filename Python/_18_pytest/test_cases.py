@@ -7,7 +7,7 @@ def test_add_int():
     assert add(2,3) == 5
 
 def test_add_str():
-    assert add("a","b") == "abc"
+    assert add("a","b") == "ab"
 
 class Test_Cases:
     def test_add_int(self):

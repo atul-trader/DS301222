@@ -45,6 +45,9 @@ class Child(Dad):
     def bike(self):
         return f"Color : Black || Brand : TVS"
 
+dad_obj = Dad()
+print(dad_obj.bike())
+
 obj = Child()
 print(obj.mobile())
 print(obj.bike())
