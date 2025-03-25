@@ -13,7 +13,6 @@ def addition():                               # defining the function
     add = no1 + no2 
     print("Addition : ",add)
 
-
 addition()                                    # calling the function
 addition()
 addition()

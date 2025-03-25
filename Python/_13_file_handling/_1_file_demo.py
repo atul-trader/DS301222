@@ -1,6 +1,6 @@
 # File Handling
 
-# to store the data permentately
+# to store the data permanently
 # but it doesn't store the data in organize manner
 # it is not secure
 
